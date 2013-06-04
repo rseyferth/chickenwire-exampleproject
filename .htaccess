@@ -1,0 +1,30 @@
+# Enable the Rewrite engine
+RewriteEngine On
+
+# Check if the file exists in the Application Public directory
+RewriteCond 	  %{DOCUMENT_ROOT}Application/Public/%{REQUEST_URI} -f [OR]
+RewriteCond 	  %{DOCUMENT_ROOT}Application/Public/%{REQUEST_URI} -d
+RewriteRule ^(.+) %{DOCUMENT_ROOT}Application/Public/$1 [L]
+
+# Module Public files
+#
+# Uncomment the lines below and replace [module] with your
+# module name, to enable a public directory for a module.
+# 
+#RewriteCond		  	%{REQUEST_URI} ^/[module]/(.+)
+#RewriteCond 	  		%{DOCUMENT_ROOT}Modules/[Module]/Public/$1 -f [OR]
+#RewriteCond 	  		%{DOCUMENT_ROOT}Modules/[Module]/Public/$1 -d
+#RewriteRule ^bmk/(.+) 	%{DOCUMENT_ROOT}Modules/[Module]/Public/$1 [L]
+
+
+# File not found in any of the static directories (>> redirect to ChickenWire)
+RewriteRule ^(.*)$ ChickenWire.php [QSA]
+
+
+# PHP Settings
+# 
+# (Feel free to change these)
+php_flag magic_quotes_gpc off
+php_flag register_globals off
+php_flag html_errors on
+php_flag display_errors on

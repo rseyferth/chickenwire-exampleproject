@@ -1,0 +1,10 @@
+{
+    "name": "my-name/my-project",
+    "description": "My ChickenWire Project",
+    
+    "minimum-stability": "dev",
+    "require": {
+        "wipkip/chickenwire": "dev-master"
+    }
+
+}

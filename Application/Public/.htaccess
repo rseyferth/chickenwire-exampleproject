@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Make sure requests came through the root directory, and
+# not straight here.
+RewriteCond %{THE_REQUEST} ^(POST|GET)\ /Application/Public/
+RewriteRule ^(.*)$ %{DOCUMENT_ROOT}/ChickenWire.php [L]
