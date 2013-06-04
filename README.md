@@ -47,7 +47,13 @@ This will install ChickenWire, along with some dependencies. You can also add mo
 dependencies by editing the `composer.json` file.
 
 
-### 3. Enjoy the chicken
+### 3. Check configuration
+
+Take a look at the default configuration in `Application/Config/Application.php`,
+and change the values where necessary.
+
+
+### 4. Enjoy the chicken
 
 When you now open your browser to the url of your directory, you should now see
 the welcome message, indicating that everything works!

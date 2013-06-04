@@ -10,6 +10,20 @@
 	$config->environment = 'development';
 
 
+	//////////////////////
+	// Set your webPath //
+	//////////////////////
+	
+	// If your project is not in the webroot of the domain, 
+	// configure the webPath here. 
+	// 
+	// The webPath is the part of the url after the domain,
+	// for example `/my-project/'
+	// 
+	$config->webPath = '/';
+
+
+
 	////////////////////////////////////
 	// Configure database connections //
 	////////////////////////////////////
