@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="<?php echo Application::getConfiguration()->defaultCharset; ?>">
+		<meta charset="<?php echo \ChickenWire\Application::getConfiguration()->defaultCharset; ?>">
 		<title></title>
 	</head>
 
